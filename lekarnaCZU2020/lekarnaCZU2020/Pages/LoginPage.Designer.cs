@@ -29,10 +29,10 @@ namespace lekarnaCZU2020.Pages
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginPage));
             this.loginButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.databaseB = new System.Windows.Forms.Button();
-            this.documentationB = new System.Windows.Forms.Button();
             this.statusL = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -52,11 +52,11 @@ namespace lekarnaCZU2020.Pages
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(442, 129);
+            this.label3.Location = new System.Drawing.Point(448, 133);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(426, 29);
+            this.label3.Size = new System.Drawing.Size(387, 29);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Přehled lékáren a doprava mezi nimi";
+            this.label3.Text = "Přehled lékáren a rozvoz z hlavní";
             // 
             // databaseB
             // 
@@ -68,16 +68,6 @@ namespace lekarnaCZU2020.Pages
             this.databaseB.Text = "Aktualizovat databázi";
             this.databaseB.UseVisualStyleBackColor = true;
             this.databaseB.Click += new System.EventHandler(this.databaseB_Click);
-            // 
-            // documentationB
-            // 
-            this.documentationB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.documentationB.Location = new System.Drawing.Point(531, 346);
-            this.documentationB.Name = "documentationB";
-            this.documentationB.Size = new System.Drawing.Size(220, 31);
-            this.documentationB.TabIndex = 8;
-            this.documentationB.Text = "Dokumentace";
-            this.documentationB.UseVisualStyleBackColor = true;
             // 
             // statusL
             // 
@@ -95,10 +85,10 @@ namespace lekarnaCZU2020.Pages
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 704);
             this.Controls.Add(this.statusL);
-            this.Controls.Add(this.documentationB);
             this.Controls.Add(this.databaseB);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.loginButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginPage";
             this.Text = "Přihlášení";
             this.Load += new System.EventHandler(this.LoginPage_Load);
@@ -111,7 +101,6 @@ namespace lekarnaCZU2020.Pages
         private System.Windows.Forms.Button loginButton;
         public System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button databaseB;
-        private System.Windows.Forms.Button documentationB;
         public System.Windows.Forms.Label statusL;
     }
 }

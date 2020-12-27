@@ -26,7 +26,7 @@ namespace lekarnaCZU2020.Pages
             pharmaciesView.View = View.Details;
             pharmaciesView.FullRowSelect = true;
 
-
+            //listview pro lékárny
             pharmaciesView.Columns.Add("ID", -1, HorizontalAlignment.Left);
             pharmaciesView.Columns.Add("Název", -2, HorizontalAlignment.Left);
             pharmaciesView.Columns.Add("Kód pracoviště", -2, HorizontalAlignment.Left);
@@ -35,6 +35,7 @@ namespace lekarnaCZU2020.Pages
             pharmaciesView.Columns.Add("Vzdálenost", -2, HorizontalAlignment.Center);
 
 
+            //listview pro cestu
             roadViewList.View = View.Details;
             roadViewList.FullRowSelect = true;
             roadViewList.Columns.Add("ID", -1, HorizontalAlignment.Left);
@@ -44,6 +45,8 @@ namespace lekarnaCZU2020.Pages
             roadViewList.Columns.Add("Ulice", -2, HorizontalAlignment.Center);
             roadViewList.Columns.Add("Vzdálenost", -2, HorizontalAlignment.Center);
             SetPharmacyView();
+
+            //nastevní select boxu pro filter
 
             Dictionary<string, string> boxDictionary = new Dictionary<string, string>();
             boxDictionary.Add("primaryId", "ID");
@@ -56,6 +59,7 @@ namespace lekarnaCZU2020.Pages
             filterBox.DisplayMember = "Value";
             filterBox.ValueMember = "Key";
 
+            //nastevní select boxu pro možnosti
             boxDictionary = new Dictionary<string, string>();
             boxDictionary.Add("detail", "Detail lékárny");
             boxDictionary.Add("edit", "Výběr pro výpočet");
@@ -63,11 +67,11 @@ namespace lekarnaCZU2020.Pages
             modeBox.DisplayMember = "Value";
             modeBox.ValueMember = "Key";
             modeBox.SelectedIndex = 0;
-
         }
 
         private void SetPharmacyView(string filter = null, string value = null)
         {
+            //filter settings
             List<Pharmacy> pharmacies;
             if (filter == null && value == null)
             {
@@ -128,6 +132,7 @@ namespace lekarnaCZU2020.Pages
         private int _y;
         private void DrawMap(int vzdalenost)
         {
+            //vykreslení mapy
             Graphics g;
             g = Graphics.FromImage(DrawArea);
             Pen mypen = new Pen(Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256)));
@@ -186,9 +191,10 @@ namespace lekarnaCZU2020.Pages
         
         private void searchB_Click(object sender, EventArgs e)
         {
-            if (filterTextBox.Text != null && filterBox.SelectedIndex != 0)
+            if (filterTextBox.Text != null)
             {
                 SetPharmacyView(filterBox.SelectedValue.ToString(), filterTextBox.Text);
+                errorL.Text = "";
             }
             else
             {
@@ -224,7 +230,7 @@ namespace lekarnaCZU2020.Pages
 
             resultL.Text = "Celkem: " + vzdalenostCelkem + " Km.";
         }
-
+        //kreslení čar ke středu rozvážky
         private void DrawResult(int vzdalenost)
         {
             Graphics g;

@@ -166,9 +166,9 @@ namespace lekarnaCZU2020.Pages
             // searchB
             // 
             this.searchB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.searchB.Location = new System.Drawing.Point(376, 123);
+            this.searchB.Location = new System.Drawing.Point(210, 123);
             this.searchB.Name = "searchB";
-            this.searchB.Size = new System.Drawing.Size(207, 38);
+            this.searchB.Size = new System.Drawing.Size(373, 38);
             this.searchB.TabIndex = 11;
             this.searchB.Text = "Vyhledat";
             this.searchB.UseVisualStyleBackColor = true;
@@ -180,7 +180,7 @@ namespace lekarnaCZU2020.Pages
             this.errorL.AutoSize = true;
             this.errorL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.errorL.ForeColor = System.Drawing.Color.Red;
-            this.errorL.Location = new System.Drawing.Point(18, 134);
+            this.errorL.Location = new System.Drawing.Point(804, 88);
             this.errorL.Name = "errorL";
             this.errorL.Size = new System.Drawing.Size(0, 25);
             this.errorL.TabIndex = 12;
@@ -189,7 +189,7 @@ namespace lekarnaCZU2020.Pages
             // 
             this.modeBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.modeBox.FormattingEnabled = true;
-            this.modeBox.Location = new System.Drawing.Point(178, 131);
+            this.modeBox.Location = new System.Drawing.Point(21, 131);
             this.modeBox.Name = "modeBox";
             this.modeBox.Size = new System.Drawing.Size(183, 24);
             this.modeBox.TabIndex = 13;

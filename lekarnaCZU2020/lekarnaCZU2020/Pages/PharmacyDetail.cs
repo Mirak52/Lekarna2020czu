@@ -21,6 +21,7 @@ namespace lekarnaCZU2020.Pages
 
         private void ShowDetailedInfo(string id)
         {
+            //výběr z databáze a dosazení do labels
             var pharmacy = Program.PharmacyDatabase.QueryGetById(int.Parse(id)).Result;
 
             typLekarnyInfoL.Text = pharmacy[0].TYP_LEKARNY;
